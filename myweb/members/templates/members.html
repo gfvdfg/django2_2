@@ -10,7 +10,10 @@
     <a href="../members" >Members</a>
     <a href="../about" >About</a>
 
-    {%load static %}
-    <img src="{% static 'c.jbg' %}" height="400">
+    <ul>
+        {% for x in mymembers %}
+          <li>{{ x.firstname }} {{ x.lastname }}</li>
+        {% endfor %}
+      </ul>      
 </body>
 </html>
